@@ -41,7 +41,7 @@ namespace _01._List_Practice
 				item.name = temp;
 				Console.WriteLine($"{item.name}을 획득했습니다. 오예!");
 				items.Add(item);
-				PrintItem(item);
+				PrintItem(items);
 			}
 
 			public void ThrowItem(Item item)
@@ -52,20 +52,30 @@ namespace _01._List_Practice
 				item.name = temp;
 				Console.WriteLine($"{item.name}을 버립니다. 휙~");
 				items.Remove(item);
-				PrintItem(item);
+				PrintItem(items);
 			}
 
-			public void PrintItem(Item item)
+			public void PrintItem(List<Item> items)
 			{
 				Console.WriteLine("==아이템 전체 목록==");
-				foreach (Item i in items) { }
-					Console.WriteLine(item.name);
+				foreach (Item i in items)
+				{
+					Console.WriteLine(i.name);
+				}
 			}
 		}
 
 		public class Item
 		{
+			Item item;
+			public Item() { 
+			}
+			public Item(string temp)
+			{
+				item = new Item(temp);
+			}
 			public string name;
+			public int price;
 		}
 	}
 }
