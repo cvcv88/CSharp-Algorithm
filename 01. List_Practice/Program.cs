@@ -10,7 +10,7 @@
 		 * 
 		 * 5. 사용자의 입력을 받아서 없던 데이터면 추가, 있던 데이터면 삭제하는 리스트 작성
 		 */
-		static void Main(string[] args)
+		static void Main1(string[] args)
 		{
 			MyList myList = new MyList();
 
