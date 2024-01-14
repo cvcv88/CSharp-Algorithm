@@ -38,7 +38,7 @@ namespace _01._List_Practice
 				Console.WriteLine("추가할 아이템 이름을 입력하세요!");
 				Console.Write(">");
 				string temp = Console.ReadLine();
-				item.name = temp;
+				item = new Item(temp);
 				Console.WriteLine($"{item.name}을 획득했습니다. 오예!");
 				items.Add(item);
 				PrintItem(items);
@@ -49,7 +49,7 @@ namespace _01._List_Practice
 				Console.WriteLine("버릴 아이템 이름을 입력하세요!");
 				Console.Write(">");
 				string temp = Console.ReadLine();
-				item.name = temp;
+				item = new Item(temp);
 				Console.WriteLine($"{item.name}을 버립니다. 휙~");
 				items.Remove(item);
 				PrintItem(items);
@@ -67,12 +67,10 @@ namespace _01._List_Practice
 
 		public class Item
 		{
-			Item item;
-			public Item() { 
-			}
+			public Item() { }
 			public Item(string temp)
 			{
-				item = new Item(temp);
+				this.name = temp;
 			}
 			public string name;
 			public int price;
