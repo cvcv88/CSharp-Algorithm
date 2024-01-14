@@ -50,7 +50,8 @@ namespace _01._List_Practice
 				Console.Write(">");
 				string temp = Console.ReadLine();
 				item = new Item(temp);
-				Console.WriteLine($"{item.name}을 버립니다. 휙~");
+				items.Remove(item);
+				Console.WriteLine($"{temp}을 버립니다. 휙~");
 				items.Remove(item);
 				PrintItem(items);
 			}
