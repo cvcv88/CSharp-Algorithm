@@ -15,11 +15,11 @@ namespace _034._StackQueue_Practice
 			int[] result = ProcessJob(new int[] { 4, 4, 12, 10, 2, 10 });
 			foreach(int day in result)
 			{
-				Console.WriteLine(day);
+				Console.Write($"{day} ");
 			}
 		}
 
-		public const int WorkTime = 8;
+		public const int WorkTime = 8; // 일하는 시간(고정)
 		static int[] ProcessJob(int[] jobList)
 		{
 			Queue<int> queue = new Queue<int>(jobList);
@@ -41,6 +41,7 @@ namespace _034._StackQueue_Practice
 						remainTime -= workTime;
 						// 작업 완료
 						days.Add(day);
+						break;
 					}
 					else
 					{
