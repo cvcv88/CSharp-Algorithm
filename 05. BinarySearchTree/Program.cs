@@ -167,7 +167,6 @@
 			// 삭제
 			sortedSet.Remove(4);	// 찾아서 지우기, RemoveAt RemoveFirst RemoveLast 불가능
 			// 반환형 bool
-			// 반환형 bool
 
 			// 탐색
 			bool success = sortedSet.Contains(3);          // 포함 확인
