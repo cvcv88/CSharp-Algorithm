@@ -159,19 +159,21 @@
 			// 삽입
 			sortedSet.Add(1);		// 특정 위치에 내가 원하는 것 집어넣기 불가능
 			sortedSet.Add(3);       // AddFirst AddLast 불가능
-			sortedSet.Add(4);
+			sortedSet.Add(4);		// 반환형 bool
 			sortedSet.Add(5);
 			sortedSet.Add(2);
 			sortedSet.Add(3);       // 중복 추가는 ^무시^함
 
 			// 삭제
 			sortedSet.Remove(4);	// 찾아서 지우기, RemoveAt RemoveFirst RemoveLast 불가능
+			// 반환형 bool
+			// 반환형 bool
 
 			// 탐색
 			bool success = sortedSet.Contains(3);          // 포함 확인
 			bool fail = sortedSet.Contains(6);
 
-			// 순서대로 출력시 정렬된 결과 확인
+			// 순서대로 출력시 정렬된 결과 확인(중위순회)
 			foreach (int value in sortedSet)
 			{
 				Console.WriteLine(value);       // output : 1235
@@ -179,10 +181,9 @@
 			Console.WriteLine();
 
 
-
-			+
 			// 이진탐색트리 기반의 SortedDictionary 자료구조
 			// 중복을 허용하지 않는 key를 기준으로 정렬을 보장한 value 저장소
+			// ↓ string : 열쇠 key, Item : 실제 내용물 value
 			SortedDictionary<string, Item> sortedDictionary = new SortedDictionary<string, Item>();
 			// < 정렬기준(key), 실제 데이터(value) >
 			// ex) <"파이리", 파이리 공격력 방어력> <"피카츄", 피카츄 공격력 방어력>
@@ -216,12 +217,12 @@
 			// 순서대로 출력시 정렬된 결과 확인
 			foreach (string name in sortedDictionary.Keys)
 			{
-				Console.WriteLine(name);     // output : 
+				Console.WriteLine(name);
 			}
 			Console.WriteLine();
 			foreach (Item value in sortedDictionary.Values)
 			{
-				Console.WriteLine($"{value.name} {value.cost}");     // output : BADC
+				Console.WriteLine($"{value.name} {value.cost}");
 			}
 			Console.WriteLine();
 
