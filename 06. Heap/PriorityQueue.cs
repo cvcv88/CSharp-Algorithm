@@ -77,12 +77,12 @@ namespace DataSturcture
 			nodes.RemoveAt(nodes.Count - 1);
 
 			int index = 0;
-			while(index < nodes.Count)
+			while (index < nodes.Count)
 			{
 				int leftIndex = 2 * index + 1;
 				int rightIndex = 2 * index + 2;
 
-				if(rightIndex < nodes.Count) // 자식이 둘다 있는 경우
+				if (rightIndex < nodes.Count) // 자식이 둘다 있는 경우
 				{
 					int lessIndex;
 					if (nodes[leftIndex].priority.CompareTo(nodes[rightIndex].priority) < 0)
@@ -106,7 +106,7 @@ namespace DataSturcture
 						break;
 					}
 				}
-				else if(leftIndex < nodes.Count) // 자식이 하나만 있는 경우
+				else if (leftIndex < nodes.Count) // 자식이 하나만 있는 경우
 				{
 					Node leftNode = nodes[leftIndex];
 					if (nodes[index].priority.CompareTo(nodes[leftIndex].priority) > 0)
