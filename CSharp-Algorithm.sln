@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. LinkedList_Practice", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "034. StackQueue_Practice", "034. StackQueue_Practice\034. StackQueue_Practice.csproj", "{F2DE2AE1-C758-458A-8727-B9E157FF35ED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. HashTable_Practice", "07. HashTable_Practice\07. HashTable_Practice.csproj", "{229030C8-93A6-43F0-9466-20EF1AE6E866}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{F2DE2AE1-C758-458A-8727-B9E157FF35ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2DE2AE1-C758-458A-8727-B9E157FF35ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2DE2AE1-C758-458A-8727-B9E157FF35ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{229030C8-93A6-43F0-9466-20EF1AE6E866}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{229030C8-93A6-43F0-9466-20EF1AE6E866}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{229030C8-93A6-43F0-9466-20EF1AE6E866}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{229030C8-93A6-43F0-9466-20EF1AE6E866}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
