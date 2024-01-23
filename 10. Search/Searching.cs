@@ -53,8 +53,6 @@ namespace _10._Search
 				}
 			}
 			return -1;
-
-
 			}
 		/*public static int BinarySearch<T>(IList<int> list, int item)
 			{
@@ -77,5 +75,75 @@ namespace _10._Search
 					}
 				}
 				return -1;*/
+
+
+		// <깊이 우선 탐색 (Depth-First Search)>
+		// 그래프의 분기를 만났을 때 최대한 깊이 내려간 뒤,
+		// 분기의 탐색을 마쳤을 때 다음 분기를 탐색
+		// 스택을 통해 구현
+		// 메모리 사용 측면에서 너비 우선 탐색보다 좋다.
+		public static void DFS(in bool[,] graph, int start, out bool[] visited, out int[] parents)
+		{
+			visited = new bool[graph.GetLength(0)];
+			parents = new int[graph.GetLength(0)];
+
+			for (int i = 0; i < graph.GetLength(0); i++)
+			{
+				visited[i] = false;
+				parents[i] = -1; // 나를 찾은 정점이 없다는 뜻
+			}
+
+			SearchNode(graph, start, visited, parents);
+		}
+
+		private static void SearchNode(in bool[,] graph, int start, bool[] visited, int[] parents)
+		{
+			visited[start] = true;
+			for (int i = 0; i < graph.GetLength(0); i++)
+			{
+				if (graph[start, i] &&      // 연결되어 있는 정점이며,
+					!visited[i])            // 방문한적 없는 정점
+				{
+					parents[i] = start;
+					SearchNode(graph, i, visited, parents); // 재귀, 백트래킹
+				}
+			}
+		}
+
+		// <너비 우선 탐색 (Breadth-First Search)>
+		// 그래프의 분기를 만났을 때 모든 분기들을 탐색한 뒤,
+		// 다음 깊이의 분기들을 탐색
+		// 큐를 통해 탐색
+		// 언제나 최단 경로가 나온다. -> 최단 거리 보장해준다.
+		public static void BFS(in bool[,] graph, int start, out bool[] visited, out int[] parents)
+		{
+			visited = new bool[graph.GetLength(0)];
+			parents = new int[graph.GetLength(0)];
+
+			for (int i = 0; i < graph.GetLength(0); i++)
+			{
+				visited[i] = false;
+				parents[i] = -1;
+			}
+
+			visited[start] = true;
+			Queue<int> queue = new Queue<int>();
+			queue.Enqueue(start);
+			while (queue.Count > 0)
+			{
+				int next = queue.Dequeue();
+
+				for (int i = 0; i < graph.GetLength(0); i++)
+				{
+					if (graph[next, i] &&       // 연결되어 있는 정점이며,
+						!visited[i])            // 방문한적 없는 정점
+					{
+						visited[i] = true;
+						parents[i] = next;
+						queue.Enqueue(i);
+					}
+				}
+			}
+		}
 	}
 }
