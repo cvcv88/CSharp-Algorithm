@@ -113,7 +113,7 @@ namespace _10._Search
 		// <너비 우선 탐색 (Breadth-First Search)>
 		// 그래프의 분기를 만났을 때 모든 분기들을 탐색한 뒤,
 		// 다음 깊이의 분기들을 탐색
-		// 큐를 통해 탐색
+		// 큐를 통해 구현
 		// 언제나 최단 경로가 나온다. -> 최단 거리 보장해준다.
 		public static void BFS(in bool[,] graph, int start, out bool[] visited, out int[] parents)
 		{
