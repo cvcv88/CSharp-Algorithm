@@ -1,4 +1,6 @@
-﻿namespace _10._Search_Practice
+﻿using System;
+
+namespace _10._Search_Practice
 {
 	internal class Program
 	{
@@ -8,3 +10,4 @@
 		}
 	}
 }
+
