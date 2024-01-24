@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09. Sort", "09. Sort\09. So
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10. Search", "10. Search\10. Search.csproj", "{D581CDBD-D195-45BA-BDA4-280E01E012C8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11. ShortesPath", "11. ShortesPath\11. ShortesPath.csproj", "{F770B5CF-CBBB-4AB3-BEC6-8E73844C1789}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{D581CDBD-D195-45BA-BDA4-280E01E012C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D581CDBD-D195-45BA-BDA4-280E01E012C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D581CDBD-D195-45BA-BDA4-280E01E012C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F770B5CF-CBBB-4AB3-BEC6-8E73844C1789}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F770B5CF-CBBB-4AB3-BEC6-8E73844C1789}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F770B5CF-CBBB-4AB3-BEC6-8E73844C1789}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F770B5CF-CBBB-4AB3-BEC6-8E73844C1789}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
